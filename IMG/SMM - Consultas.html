@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://127.0.0.1:5500/consultas.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SMM - Consultas</title>
+    <link rel="icon" type="image/x-icon" href="http://127.0.0.1:5500/IMG/WhatsApp%20Image%202023-09-22%20at%2012.23.30.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./SMM - Consultas_files/all.min.css">
+    <link rel="stylesheet" href="./SMM - Consultas_files/bootstrap.css">
+    <link rel="stylesheet" href="./SMM - Consultas_files/Config.module.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./SMM - Consultas_files/Header.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./SMM - Consultas_files/exames.css">
+  </head>
+  <body>
+    <header class="d-flex justify-content-around align-items-center">
+      <a href="http://127.0.0.1:5500/home.html">
+        <img class="logo" src="./SMM - Consultas_files/logo.png" alt="Saúde Muito Mais">
+      </a>
+      <div class="d-flex gap-3 flex-wrap">
+        <ul class="navbar-nav d-flex flex-row gap-3">
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/consultas.html#">
+              Ouvidoria
+              <i class="fa-solid fa-headset"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/consultas.html#">
+              Notificações
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/usuario.html">
+              Usuário
+              <i class="fa-solid fa-user"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <nav class="navbar navbar-expand-md bg-dodgerblue navbar-dark">
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarCollapse" class="navbar-collapse collapse">
+        <ul class="navbar-nav w-100 me-auto justify-content-around align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="http://127.0.0.1:5500/home.html">INICIO <i class="fa-solid fa-house"></i></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="http://127.0.0.1:5500/consultas.html#">MARCAÇÕES</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="http://127.0.0.1:5500/exames.html">EXAMES</a>
+              <a class="dropdown-item" href="http://127.0.0.1:5500/consultas.html">CONSULTAS</a>
+              <a class="dropdown-item" href="http://127.0.0.1:5500/transporte.html">TRANSPORTE</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="http://127.0.0.1:5500/medicamentos.html">MEDICAMENTOS</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="http://127.0.0.1:5500/melhoremcasa.html">MELHOR EM CASA</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="http://127.0.0.1:5500/consultas.html#">AGENTES</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="http://127.0.0.1:5500/agenteSaude.html">DE SAÚDE</a>
+              <a class="dropdown-item" href="http://127.0.0.1:5500/consultas.html#">DE ENDEMIAS</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="http://127.0.0.1:5500/consultas.html#">CORDENADORIAS</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="http://127.0.0.1:5500/atencaobasica.html">ATENÇÃO BÁSICA</a>
+              <a class="dropdown-item" href="http://127.0.0.1:5500/epidemiologica.html">EPIDEMIOLÓGICA</a>
+              <a class="dropdown-item" href="http://127.0.0.1:5500/vigilanciaSanitaria.html">VIGILÂNCIA SANITÁRIA</a>
+              <a class="dropdown-item" href="http://127.0.0.1:5500/odontologia.html">ODONTOLOGIA</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <article class="apresentacao">
+        <div class="container-apresentacao">
+          <div>
+            <p>
+              Nesta sessão você pode solicitar ao setor responsável a
+              marcação de Consultas que estão disponíveis em seu município.
+              Anexando sua solicitação médica, você poderá acompanhar o todo o
+              processo de sua requisição. Em caso de dúvidas, entrar em contato
+              com a ouvidoria ou setor responsável.
+            </p>
+          </div>
+          <div>
+            <img src="./SMM - Consultas_files/medico-ficha.jpg" alt="">
+          </div>
+        </div>
+      </article>
+      <article>
+
+        <div class="botoes d-flex gap-3">
+          <button onclick="especialidades()">CONSULTAS DE ESPECIALIDADES</button>
+          <button onclick="primeiraConsulta()">PRIMEIRA CONSULTA</button>
+        </div>
+
+        <form id="form-consulta">          
+           <div class="escolherEspec">
+                <label for="clinico">Clínico/Enfermeiro
+                    <input name="especialidade" id="clinico" type="radio">
+                </label>
+                <label for="odontologico">Odontológico
+                    <input name="especialidade" id="odontologico" type="radio">
+                </label>
+           </div>
+              <div>
+                  <p>Local de atendimento:</p>
+                  <select>
+                    <option value="">UBS - JOSÉ RAMOS</option>
+                    <option value="">UBS - JOÃO DE SOUZA</option>
+                    <option value="">UBS - AGRIPINO</option>
+                    <option value="">UBS - ZILDA ARNS</option>
+                  </select>
+              </div>
+
+              <div class="aviso">
+                <h4>Aviso <span>⚠</span></h4>
+                <p>Antes de confirmar é necessário anexar uma receita válida para prosseguirmos com a solicitação da consulta, ao confimar, sua solicitação ficará como "pendente", e após confirmação você recebera uma notificação informando sobre sua consulta ou Anexar a receita novamente.</p>
+                <label for=""><input type="checkbox"> Li e concordo com os <span>termos e serviços</span></label>
+              </div>
+              <button class="btnSolicitacaoCons" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">CONFIRMAR</button></form>
+      </article>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Solicitação de Consulta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Sua consulta foi solicitada com sucesso! Aguarde aprovação na página principal</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </main>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+
+<script src="./SMM - Consultas_files/popper.js.download"></script>
+<script src="./SMM - Consultas_files/bootstrap.js.download"></script>
+<script src="./SMM - Consultas_files/consultas.js.download"></script>
+</body></html>
